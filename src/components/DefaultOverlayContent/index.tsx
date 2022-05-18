@@ -22,3 +22,5 @@ const DefaultOverlayContent: React.FC<Props> = ({ label, description }) => {
         </Container>
     );
 }
+
+export default DefaultOverlayContent;
