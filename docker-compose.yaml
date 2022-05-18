@@ -1,0 +1,8 @@
+version: '3.6'
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - 8089:80
