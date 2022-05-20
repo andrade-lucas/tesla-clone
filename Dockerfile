@@ -16,9 +16,9 @@ RUN npm install
 RUN npm run build
 
 #prepare nginx
-FROM nginx:1.16.0-alpine
-COPY --from=build /app/dist /usr/share/nginx/html
+FROM nginx
 COPY nginx/nginx.conf /etc/nginx/conf.d
+COPY --from=build /app/dist /usr/share/nginx/html
 
 #fire up nginx
 EXPOSE 80
